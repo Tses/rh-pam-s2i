@@ -1,7 +1,9 @@
 import java.lang.Number;
+import com.hello1.helloproject.HelloAlert;
 
 rule "AlertClassification"
 	dialect "mvel"
 	when
+		exists (HelloAlert( name == "green" )) 
 	then
 end
