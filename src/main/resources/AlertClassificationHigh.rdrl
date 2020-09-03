@@ -3,6 +3,7 @@ import com.hello1.helloproject.HelloAlert;
 
 rule "AlertClassificationHigh"
 	dialect "mvel"
+	no-loop true
 	when
 		alert : HelloAlert( name == "red" )
 	then
