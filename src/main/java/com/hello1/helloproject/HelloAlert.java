@@ -6,12 +6,56 @@ package com.hello1.helloproject;
 
 public class HelloAlert implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public HelloAlert() {
-    }
+	@org.kie.api.definition.type.Label(value = "name")
+	private java.lang.String name;
+	@org.kie.api.definition.type.Label(value = "priority")
+	private java.lang.Integer priority;
+	private java.lang.Integer status;
+	private java.lang.String action;
 
+	public HelloAlert() {
+	}
 
+	public java.lang.String getName() {
+		return this.name;
+	}
 
+	public void setName(java.lang.String name) {
+		this.name = name;
+	}
+
+	public java.lang.Integer getPriority() {
+		return this.priority;
+	}
+
+	public void setPriority(java.lang.Integer priority) {
+		this.priority = priority;
+	}
+
+	public java.lang.Integer getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(java.lang.Integer status) {
+		this.status = status;
+	}
+
+	public java.lang.String getAction() {
+		return this.action;
+	}
+
+	public void setAction(java.lang.String action) {
+		this.action = action;
+	}
+
+	public HelloAlert(java.lang.String name, java.lang.Integer priority,
+			java.lang.Integer status, java.lang.String action) {
+		this.name = name;
+		this.priority = priority;
+		this.status = status;
+		this.action = action;
+	}
 
 }
