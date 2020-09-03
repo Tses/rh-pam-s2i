@@ -4,6 +4,9 @@ import com.hello1.helloproject.HelloAlert;
 rule "AlertClassification"
 	dialect "mvel"
 	when
-		HelloAlert( name == "green" )
+		alert : HelloAlert( name == "green" )
 	then
+		modify( alert ) {
+				setPriority( 0 )
+		}
 end
