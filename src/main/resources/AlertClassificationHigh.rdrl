@@ -1,7 +1,9 @@
 import java.lang.Number;
+import com.hello1.helloproject.HelloAlert;
 
 rule "AlertClassificationHigh"
 	dialect "mvel"
 	when
+		HelloAlert( name == "red" )
 	then
 end
