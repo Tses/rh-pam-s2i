@@ -4,6 +4,9 @@ import com.hello1.helloproject.HelloAlert;
 rule "AlertClassificationHigh"
 	dialect "mvel"
 	when
-		HelloAlert( name == "red" )
+		alert : HelloAlert( name == "red" )
 	then
+		modify( alert ) {
+				setPriority( 100 )
+		}
 end
